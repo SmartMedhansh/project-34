@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Counter App</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+ background-color: lightpink;
+}
+
+button{
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+    <div class="wrapper">
+      <h1>Counter App</h1>
+      <p><span id="counter">0</span></p>
+      <button id="button-increment">Increment</button>
+      <button id="button-decrement">Decrement</button>
+      <button id="button-reset">Reset</button>
+    </div>
+
+    <script>
+    window.onload = function() {
+        let counter = 0;
+        const counterElement = document.getElementById('counter');
+        const incrementButton = document.getElementById('button-increment');
+        const decrementButton = document.getElementById('button-decrement');
+        const resetButton = document.getElementById('button-reset');
+
+        incrementButton.addEventListener('click', function() {
+            counter++;
+            counterElement.textContent = counter;
+        });
+
+        decrementButton.addEventListener('click', function() {
+            counter--;
+            counterElement.textContent = counter;
+        });
+
+        resetButton.addEventListener('click', function() {
+            counter = 0;
+            counterElement.textContent = counter;
+        });
+    };
+
+
+    </script>
+    
+    </body>
+
+</html>
